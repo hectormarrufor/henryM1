@@ -16,12 +16,13 @@ Como ejercicio adicional y completamente opcional, al terminar de resolver este 
 
 //FUNCION nFACTORIAL HECHA CON RECURSIVA
 function nFactorial(n, decremento = n - 1){
+   if(n == 1 || n == 0) return 1
    n = n * decremento
    decremento--
    if (decremento == 0) return n
    return nFactorial(n, decremento)
 }
-
+console.log(nFactorial(6))
 //FUNCION nFIBONACCI HECHA CON RECURSIVA
 function nFibonacci(n, f = 0, l = 1) {
    if(n == 0) return f
@@ -84,6 +85,7 @@ Queue.prototype.dequeue = function(item){
 Queue.prototype.size = function(){
    return this.queue.length
 }
+
 
 
 
